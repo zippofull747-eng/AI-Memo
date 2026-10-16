@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: '메모 슈퍼 앱',
-  description: '메모 슈퍼 앱',
+  title: 'YHK AI 메모',
+  description: 'YHK AI 메모',
 }
 
 export default function RootLayout({
