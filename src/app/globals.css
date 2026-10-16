@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* 글자 크기 설정: rem 기반 Tailwind 크기가 함께 조절됨 */
+html[data-font-size='small'] {
+  font-size: 14px;
+}
+
+html[data-font-size='medium'] {
+  font-size: 16px;
+}
+
+html[data-font-size='large'] {
+  font-size: 19px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 마크다운 프리뷰: Tailwind preflight가 초기화한 목록 스타일 복원 */
+.wmde-markdown ul {
+  list-style: disc;
+}
+
+.wmde-markdown ol {
+  list-style: decimal;
+}
+
+.wmde-markdown ul.contains-task-list {
+  list-style: none;
+}
+
+/* 마크다운 표: 열이 눌려 글자 단위로 줄바꿈되지 않도록 가로 스크롤 처리 */
+.wmde-markdown table {
+  overflow-x: auto;
+}
+
+.wmde-markdown table th {
+  white-space: nowrap;
+}
+
+.wmde-markdown table td {
+  word-break: keep-all;
+}
+
+/* 카드 미리보기: 제목 크기를 본문 수준으로 축소 */
+.memo-card-markdown .wmde-markdown h1,
+.memo-card-markdown .wmde-markdown h2,
+.memo-card-markdown .wmde-markdown h3,
+.memo-card-markdown .wmde-markdown h4 {
+  margin: 0 0 0.25rem;
+  padding: 0;
+  border: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.memo-card-markdown .wmde-markdown p,
+.memo-card-markdown .wmde-markdown ul,
+.memo-card-markdown .wmde-markdown ol {
+  margin-bottom: 0.25rem;
+}
+
+/* Custom utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

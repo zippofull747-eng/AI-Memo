@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/*secret*)",
+      "Read(**/*secrets*/**)",
+      "Read(**/*credential*)",
+      "Read(**/*credentials*/**)",
+      "Edit(**/.env)",
+      "Edit(**/.env.*)",
+      "Edit(**/*secret*)",
+      "Edit(**/*secrets*/**)",
+      "Edit(**/*credential*)",
+      "Edit(**/*credentials*/**)",
+      "Bash(*.env*)",
+      "Bash(*secret*)",
+      "Bash(*credential*)",
+      "PowerShell(*.env*)",
+      "PowerShell(*secret*)",
+      "PowerShell(*credential*)"
+    ]
+  }
+}
